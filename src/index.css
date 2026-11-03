@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-white antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer components {
+  .timer-ring {
+    transition: stroke-dashoffset 1s linear;
+  }
+  
+  .mode-btn {
+    @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
+  }
+  
+  .mode-btn.active {
+    @apply shadow-lg;
+  }
+  
+  .control-btn {
+    @apply w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95;
+  }
+  
+  .stat-card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center;
+  }
+}
